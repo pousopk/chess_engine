@@ -10,7 +10,7 @@ typedef unsigned long long U64;
 #define MAXGAMEMOVES 2048
 
 enum {VACIO, wP,wN,wB,wQ,wK,wR,bP,bN,bB,bQ,bK,bR};
-enum {FILA_A,FILA_B,FILA_C,FILA_D,FILA_E,FILA_F,FILA_G,FILA_NONE};
+enum {FILA_A,FILA_B,FILA_C,FILA_D,FILA_E,FILA_F,FILA_G,FILA_H,FILA_NONE};
 enum {COLUMNA_1,COLUMNA_2,COLUMNA_3,COLUMNA_4,COLUMNA_5,COLUMNA_6,COLUMNA_7,COLUMNA_8,COLUMNA_NONE};
 
 enum{BLANCAS,NEGRAS,AMBAS};
@@ -37,6 +37,7 @@ typedef struct
     int enPas;
     int fiftyMove;
     U64 posKey;
+
 } S_UNDO;
 
 typedef struct {
@@ -67,8 +68,7 @@ typedef struct {
 
 } S_TABLERO;
 
-//GLOBALS
-
+//GLOBAL
 extern int Sq120ToSq64[BRD_SQ_NUM];
 extern int Sq64ToSq120[64];
 //MACROS

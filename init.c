@@ -1,9 +1,9 @@
 #include "defs.h"
-#include "stdio.h"
-int Sq120toSq64[BRD_SQ_NUM];
-int Sq64toSq120[64];
 
-void InitSq120to64 (){
+int Sq120ToSq64[BRD_SQ_NUM];
+int Sq64ToSq120[64];
+
+void InitSq120To64(){
     int index = 0;
     int fila = FILA_A;
     int columna = COLUMNA_1;
@@ -19,7 +19,7 @@ void InitSq120to64 (){
     }
 
     for(columna=COLUMNA_1; columna <=COLUMNA_8;++columna){
-        for(fila = FILA_A; fila <= FILA_G;++fila){
+        for(fila = FILA_A; fila <= FILA_H;++fila){
             sq = FR2SQ(fila,columna);
             Sq64ToSq120[sq64] = sq;
             Sq120ToSq64[sq]= sq64;
@@ -29,5 +29,5 @@ void InitSq120to64 (){
 }
 
 void AllInit(){
-    InitSq120to64();
+    InitSq120To64();
 }
